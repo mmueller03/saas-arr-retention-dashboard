@@ -1,0 +1,37 @@
+year,component,sort_order,direction,amount
+2018,Beginning ARR,1,base,4930.5
+2018,New,2,increase,1191245.66
+2018,Expansion,3,increase,0.0
+2018,Contraction,4,decrease,0.0
+2018,Churn,5,decrease,-4930.5
+2018,Ending ARR,6,base,1191245.66
+2019,Beginning ARR,1,base,1191245.66
+2019,New,2,increase,1851653.95
+2019,Expansion,3,increase,145761.51
+2019,Contraction,4,decrease,-483211.35
+2019,Churn,5,decrease,-596265.91
+2019,Ending ARR,6,base,2109183.86
+2020,Beginning ARR,1,base,2109183.86
+2020,New,2,increase,6109233.25
+2020,Expansion,3,increase,1584634.64
+2020,Contraction,4,decrease,-135090.44
+2020,Churn,5,decrease,-1323569.56
+2020,Ending ARR,6,base,8344391.75
+2021,Beginning ARR,1,base,8344391.75
+2021,New,2,increase,2127904.61
+2021,Expansion,3,increase,3676210.52
+2021,Contraction,4,decrease,-1765538.61
+2021,Churn,5,decrease,-947204.41
+2021,Ending ARR,6,base,11435763.86
+2022,Beginning ARR,1,base,11435763.86
+2022,New,2,increase,12234.3
+2022,Expansion,3,increase,641237.5
+2022,Contraction,4,decrease,-1379910.48
+2022,Churn,5,decrease,-6464584.16
+2022,Ending ARR,6,base,4244741.02
+2023,Beginning ARR,1,base,4244741.02
+2023,New,2,increase,0.0
+2023,Expansion,3,increase,217911.5
+2023,Contraction,4,decrease,-622706.64
+2023,Churn,5,decrease,-1742335.49
+2023,Ending ARR,6,base,2097610.39

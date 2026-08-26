@@ -4,7 +4,7 @@ Sheet-by-sheet instructions for building the workbook in **Tableau Desktop Publi
 Edition** (free, no expiry, saves `.twb`/`.twbx` locally, 15M row cap — this data is
 8,259 rows).
 
-Connect to all three CSVs in `data/` as separate data sources. They do not need to be
+Connect to the CSVs in `data/` as separate data sources. They do not need to be
 joined; each view below names the source it uses.
 
 ---
@@ -38,19 +38,22 @@ This is the establishing shot. Keep it uncluttered.
 
 **Source:** `arr_waterfall_by_year.csv`
 
-The classic SaaS bridge. Tableau does not have a native waterfall, so:
+The classic SaaS bridge. Use `arr_waterfall_long.csv`, which is already in the shape
+Tableau wants, so no in-app pivot is needed.
 
-- Pivot `new_arr`, `expansion_arr`, `contraction_arr`, `churn_arr` into a single
-  measure using **Data > Pivot** on the CSV, giving `component` and `amount`
-- Columns: `year`
-- Rows: `SUM(amount)` set to **Running Total** via a table calculation
-- Mark: Gantt Bar
-- Size: `-SUM(amount)`
-- Color: `component`, with green for new and expansion, red for contraction and churn
+- Columns: `year` (discrete), then `component` nested inside it, sorted by `sort_order`
+- Rows: `SUM(amount)`
+- Filter `component` to New, Expansion, Contraction, Churn (leave out the two
+  `base` rows for a stacked view)
+- Mark: bar
+- Color: `direction`, green for increase, red for decrease
 
-If the running-total waterfall fights you, a stacked bar of the four components per
-year carries the same message and takes five minutes instead of thirty. Ship that
-first, upgrade later.
+That gives a readable stacked bridge in about five minutes. If you then want the true
+floating waterfall, change Rows to a **Running Total** quick table calculation, switch
+the mark to **Gantt Bar**, and put `-SUM(amount)` on Size.
+
+Build the stacked version first. It carries the whole message on its own, and the
+floating version is polish.
 
 ## Sheet 3 — Retention rates
 

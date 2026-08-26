@@ -85,6 +85,8 @@ data/
   customer_arr_by_year.csv        3,028 customer-year ARR snapshots at Jan 1
   arr_waterfall_by_year.csv       6 years: beginning, new, expansion, contraction,
                                   churn, ending ARR, plus gross and net retention
+  arr_waterfall_long.csv          the same waterfall in long format, ready to plot
+                                  in Tableau without an in-app pivot
 
 scripts/prep_arr_data.py          builds and verifies all three CSVs
 DASHBOARD_SPEC.md                 sheet-by-sheet Tableau build instructions

@@ -36,10 +36,10 @@ This is the establishing shot. Keep it uncluttered.
 
 ## Sheet 2 — ARR waterfall
 
-**Source:** `arr_waterfall_by_year.csv`
+**Source:** `arr_waterfall_long.csv`
 
-The classic SaaS bridge. Use `arr_waterfall_long.csv`, which is already in the shape
-Tableau wants, so no in-app pivot is needed.
+The classic SaaS bridge. This file is already in the shape Tableau wants, so no in-app
+pivot is needed.
 
 - Columns: `year` (discrete), then `component` nested inside it, sorted by `sort_order`
 - Rows: `SUM(amount)`
